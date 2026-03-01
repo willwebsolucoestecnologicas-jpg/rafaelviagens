@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Viagens - Pacotes e Turismo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-shuttle-van van-icon"></i>
+            <div class="loading-bar"></div>
+            <h1>Rafael Viagens</h1>
+            <p>Preparando seu próximo destino...</p>
+        </div>
+    </div>
+
+    <header id="main-header">
+        <div class="logo">
+            <img src="logo.png" alt="Rafael Viagens">
+            <span>Rafael Viagens</span>
+        </div>
+        <a href="https://wa.me/5583996742980" class="contact-header" target="_blank">
+            <i class="fab fa-whatsapp"></i> (83) 99674-2980
+        </a>
+    </header>
+
+    <main>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sua viagem incrível começa aqui</h1>
+                <p>Agência de turismo rodoviário. Pacotes completos com hospedagem e transporte em Vans executivas de 15 e 20 lugares.</p>
+                <div class="amenities">
+                    <span class="amenity-tag"><i class="fas fa-file-signature"></i> ANTT e Cadastur</span>
+                    <span class="amenity-tag"><i class="fas fa-user-shield"></i> Seguro de Passageiros</span>
+                    <span class="amenity-tag"><i class="fas fa-snowflake"></i> Vans Climatizadas</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="packages">
+            <h2 class="section-title">Destinos em Destaque</h2>
+            
+            <div class="card-expanded">
+                <div class="card-header">
+                    <h3>📍 Casa 07 - Canoa Quebrada / CE</h3>
+                    <span class="badge">Mais Vendido</span>
+                </div>
+                
+                <div class="carousel">
+                    <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="carousel-track">
+                        <img src="piscina7.png" alt="Piscina da Casa" class="carousel-img">
+                        <img src="arealazer7.png" alt="Área de Lazer" class="carousel-img">
+                        <img src="churrasqueira7.png" alt="Churrasqueira" class="carousel-img">
+                        <img src="quarto1-7.png" alt="Suíte 1" class="carousel-img">
+                        <img src="quarto3-7.png" alt="Suíte Casal" class="carousel-img">
+                        <img src="quarto5-7.png" alt="Frigobar no quarto" class="carousel-img">
+                    </div>
+                    
+                    <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+
+                <div class="house-info">
+                    <h4>Casa com Piscina (6 Suítes)</h4>
+                    <ul class="features-list">
+                        <li><i class="fas fa-snowflake"></i> 6 Suítes c/ Ar, TV e Frigobar</li>
+                        <li><i class="fas fa-bed"></i> 1 Cama Casal + 2 Solteiros por quarto</li>
+                        <li><i class="fas fa-bath"></i> Banheiro privativo em todos os quartos</li>
+                        <li><i class="fas fa-swimming-pool"></i> Piscina e Área de Lazer</li>
+                        <li><i class="fas fa-hamburger"></i> Churrasqueira e Cozinha Completa</li>
+                        <li><i class="fas fa-wifi"></i> Wi-Fi Liberado</li>
+                        <li class="highlight-feature"><i class="fas fa-shuttle-van"></i> <strong>Bônus:</strong> Transporte grátis da casa p/ a praia!</li>
+                    </ul>
+                </div>
+
+                <div class="package-details">
+                    <div class="detail-item">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <strong>Hospedagem:</strong><br>R$ 60,00 diária/pessoa
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-bus"></i>
+                        <div>
+                            <strong>Transporte (Ida/Volta):</strong><br>Valores regressivos p/ grupos
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/5583996742980" class="btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Reservar
+                </a>
+            </div>
+            </section>
+
+        <section class="calculator-section">
+            <h2 class="section-title">🧮 Simule seu Orçamento</h2>
+            <div class="calculator-card">
+                <p class="calc-subtitle">Descubra o valor exato do seu pacote com base no tamanho da sua turma.</p>
+                
+                <div class="calc-grid">
+                    <div class="input-group">
+                        <label for="calc-adultos">Adultos Pagantes:</label>
+                        <input type="number" id="calc-adultos" min="10" max="20" value="15">
+                        <small>Mín: 10 | Máx: 20 passageiros</small>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="calc-dias">Diárias na Casa:</label>
+                        <input type="number" id="calc-dias" min="1" max="15" value="6">
+                    </div>
+                </div>
+                
+                <button onclick="calcularOrcamento()" class="btn-primary btn-calc">
+                    <i class="fas fa-calculator"></i> Calcular Agora
+                </button>
+                
+                <div id="calc-resultado" class="resultado-box" style="display: none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="chat-widget">
+        <div id="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Dúvidas? Fale com a IA
+            </div>
+            <i class="fas fa-chevron-up" id="chat-icon"></i>
+        </div>
+        
+        <div id="chat-body" style="display: none;">
+            <div id="chat-messages">
+                <div class="msg bot">Olá! Sou o assistente virtual da Rafael Viagens. Como posso ajudar com seu pacote hoje?</div>
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
